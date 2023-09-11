@@ -2,7 +2,7 @@ package Bank.jpamany.service;
 
 import Bank.jpamany.dao.AccountRepository;
 import Bank.jpamany.entity.Account;
-import Bank.jpamany.entity.Address;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +13,7 @@ public class AccountServiceImpl implements AccountService{
 
     private AccountRepository accountRepository;
 
+    @Autowired
     public AccountServiceImpl(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
